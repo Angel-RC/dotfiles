@@ -32,8 +32,7 @@ cd() {
     # No se ha pasado ningún parámetro, listar directorios disponibles
     local dir
     while true; do
-      dir=$(echo "$(find -maxdepth 1 -path '*/\.*' -prune \
-                -o -type d -print 2> /dev/null)\n.." | fzf +m)
+      dir=$(find . -type d -print 2>/dev/null | ls -a | fzf --prompt="Selecciona un directorio> ")
       if [[ $dir == '.' ]]; then
         break
       fi

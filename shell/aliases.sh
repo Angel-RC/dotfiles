@@ -3,8 +3,8 @@ alias sudo='sudo '
 
 alias ..="cd .."
 alias ...="cd ../.."
-alias ll="exa -l --header"
-alias la="exa --header -la"
+alias ll="exa -g -lF -U -m --header --group-directories-first"
+alias la="exa -g -laF -U -m --header --group-directories-first"
 alias ~="cd ~"
 alias dotfiles='cd $DOTFILES_PATH'
 alias htop='glances'
