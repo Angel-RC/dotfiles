@@ -24,6 +24,36 @@ function recent_dirs() {
 }
 
 
+#
+# Usage: extract <file>
+# Description: extracts archived files / mounts disk images
+# Note: .dmg/hdiutil is macOS-specific.
+#
+# credit: http://nparikh.org/notes/zshrc.txt
+extract () {
+    if [ -f $1 ]; then
+        case $1 in
+            *.tar.bz2)  tar -jxvf $@                        ;;
+            *.tar.gz)   tar -zxvf $@                        ;;
+            *.bz2)      bunzip2 $@                          ;;
+            *.dmg)      hdiutil mount $@                    ;;
+            *.gz)       gunzip $@                           ;;
+            *.tar)      tar -xvf $@                         ;;
+            *.tbz2)     tar -jxvf $@                        ;;
+            *.tgz)      tar -zxvf $@                        ;;
+            *.zip)      unzip $@                            ;;
+            *.ZIP)      unzip $@                            ;;
+            *.pax)      cat $@ | pax -r                     ;;
+            *.pax.Z)    uncompress $@ --stdout | pax -r     ;;
+            *.rar)      unrar x $@                          ;;
+            *.Z)        uncompress $@                       ;;
+            *)          echo "'$1' cannot be extracted/mounted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
 cd() {
   # Esta funcion sobreescribe el comportamiento de cd.
   # Si se le pasa un directorio como parametro, actua igual que el clasico cd.
