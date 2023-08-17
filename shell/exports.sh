@@ -48,3 +48,4 @@ path=(
 )
 
 export path
+export PATH="$HOME/.local/bin:$PATH"

@@ -2,3 +2,5 @@ echo "This is a script ran by the restoration process. You can add yours inside 
 echo
 echo "Self install scripts must have chmod u+x to run"
 echo
+# install fd
+sudo apt install fd-find
