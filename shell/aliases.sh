@@ -3,11 +3,12 @@ alias sudo='sudo '
 
 alias ..="cd .."
 alias ...="cd ../.."
-alias ll="exa -l --header"
-alias la="exa --header -la"
+alias ll="eza --header -l"
+alias la="eza --header -la"
 alias ~="cd ~"
 alias dotfiles='cd $DOTFILES_PATH'
 alias htop='glances'
+alias fd='fdfind'
 
 # Git
 alias gaa="git add -A"
