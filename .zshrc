@@ -24,6 +24,9 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# Send files to ~/.local/share/Trash instead eliminate
+alias rm='trash'
+
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
