@@ -24,6 +24,11 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+function pubkey() {
+    file=$(ls -1 --sort=modified  ~/.ssh | grep .pub | fzf --layout=reverse --header="Selecciona la clave publica que quieres copiar")
+    cat ~/.ssh/$file | wl-copy && echo '=> Public key copied to clipboard.'
+}
+
 # Send files to ~/.local/share/Trash instead eliminate
 alias rm='trash'
 
@@ -58,8 +63,3 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'command eza --group-directories-fir
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'command eza --group-directories-first --color=always --no-icons -1 $realpath'
 
 
-
-function pubkey() {
-    file=$(ls -1 --sort=modified  ~/.ssh | grep .pub | fzf --layout=reverse --header="Selecciona la clave publica que quieres copiar")
-    cat ~/.ssh/$file | wl-copy && echo '=> Public key copied to clipboard.'
-}
