@@ -15,6 +15,9 @@ state_file = "auto"
 enabled = true
 
 [audio]
+
+# Pause MPRIS media players during recording
+pause_media = true
 # Audio input device ("default" uses system default)
 # List devices with: pactl list sources short
 device = "default"
@@ -41,7 +44,7 @@ volume = 0.7
 # .en models are English-only but faster and more accurate for English
 # large-v3-turbo is faster than large-v3 with minimal accuracy loss (recommended for GPU)
 # Or provide absolute path to a custom .bin model file
-model = "base"
+model = "medium.en"
 
 # Language for transcription
 # Use "en" for English, "auto" for auto-detection

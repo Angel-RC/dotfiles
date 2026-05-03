@@ -63,3 +63,4 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'command eza --group-directories-fir
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'command eza --group-directories-first --color=always --no-icons -1 $realpath'
 
 
+export PATH=$HOME/.local/bin:$PATH

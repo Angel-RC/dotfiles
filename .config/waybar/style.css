@@ -63,6 +63,12 @@ tooltip {
   font-size: 10px;
 }
 
+#custom-workspace-windows {
+  margin: 0 6px 0 2px;
+  font-size: 11px;
+}
+
+
 #clock {
   margin-left: 8.75px;
 }
