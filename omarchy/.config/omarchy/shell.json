@@ -4,9 +4,6 @@
     "layout": {
       "center": [
         {
-          "id": "omarchy.indicators"
-        },
-        {
           "format": "dd - MMMM (dddd) HH:mm",
           "formatAlt": "d MMMM 'W'ww yyyy",
           "id": "omarchy.clock",
@@ -34,6 +31,9 @@
       "right": [
         {
           "id": "omarchy.tray"
+        },
+        {
+          "id": "omarchy.indicators"
         },
         {
           "id": "omarchy.tailscale"
